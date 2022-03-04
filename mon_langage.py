@@ -12,7 +12,8 @@ tokens = [
     'MOINS',
     'PLUS',
     'MUL',
-    'REEL'
+    'REEL',
+    'ENTIER'
 ]
 
 t_ignore = ' '
@@ -45,6 +46,10 @@ def t_MUL(t):
 
 def t_REEL(t):
     r'[0-9]{1,}\.[0-9]{1,2}'
+    return t
+
+def t_ENTIER(t):
+    r'[0-9]{1,}'
     return t
 
 
